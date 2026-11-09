@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>브랜드노트 앱 · 브랜드플러스</title>
+<meta name="description" content="배달로 만난 고객까지, 브랜드가 관리하고 매출을 올립니다. 포장박스 QR쿠폰으로 고객을 모으고, 브랜드노트 앱으로 관리해 다시 찾아오게 합니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="브랜드노트 앱 · 브랜드플러스">
+<meta property="og:description" content="배달로 만난 고객까지, 브랜드가 관리하고 매출을 올립니다.">
+<meta property="og:image" content="https://brandplus.co.kr/img/og.jpg">
+<meta property="og:url" content="https://brandplus.co.kr/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#15191F;--paper:#FAFAF7;--sand:#F0EEE8;--orange:#FF8A3D;--deep:#D2550A;--gray:#6B717C;--line:#DCD9D1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Noto Sans KR',sans-serif;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* 상단 */
+header{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;font-size:18px;letter-spacing:.5px}
+.logo .p{color:#4C8DFF}.logo .l{color:var(--orange)}
+.logo small{font-size:14px;font-weight:700;color:#C9CDD4;margin-left:10px;letter-spacing:0}
+header nav{display:flex;gap:26px;font-size:15px;font-weight:700;color:#C9CDD4}
+header nav a:hover{color:#fff}
+.call{background:var(--orange);color:var(--ink);font-weight:900;padding:9px 16px;font-size:15px}
+
+/* 첫 화면 */
+.hero{background:var(--ink);color:#F4F2EC;padding:72px 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.label{font-size:15px;font-weight:900;color:var(--orange);letter-spacing:1px;margin-bottom:18px}
+.hero h1{font-size:54px;line-height:1.22;font-weight:900;letter-spacing:-1.5px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .sub{margin-top:24px;font-size:20px;color:#C9CDD4;line-height:1.6}
+.hero .sub b{color:#fff}.hero .sub .o{color:var(--orange)}
+.btns{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 26px;font-weight:900;font-size:17px}
+.btn.main{background:var(--orange);color:var(--ink)}
+.btn.line{border:2px solid #4A5160;color:#fff}
+.btn.line:hover{border-color:#fff}
+.hero .pic{background:#FCFCFA;padding:28px;align-self:stretch;display:flex;align-items:center}
+.hero-bottom{height:72px}
+
+/* 공통 섹션 */
+section{padding:96px 0}
+.kicker{font-size:15px;font-weight:900;color:var(--deep);letter-spacing:1px;margin-bottom:12px}
+h2{font-size:40px;line-height:1.28;font-weight:900;letter-spacing:-1px}
+h2 em{font-style:normal;color:var(--deep)}
+.lead{margin-top:16px;font-size:19px;color:#3A404B}
+
+/* 포장박스 QR쿠폰이란 */
+.what .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:44px}
+.what .dark{background:var(--ink);color:#F4F2EC;padding:44px}
+.what .dark p.big{font-size:44px;font-weight:900;letter-spacing:-1px;line-height:1.2}
+.what .dark p.big span{color:var(--orange)}
+.what .dark p.s{margin-top:14px;font-size:19px;color:#C9CDD4}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.chips p{background:var(--sand);padding:12px 20px;font-weight:700;font-size:17px}
+.chips span{color:var(--deep);font-weight:900}
+
+/* 진행 방식 */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:44px;background:var(--line);border:2px solid var(--line)}
+.step{background:var(--paper);padding:30px 28px}
+.step .n{font-size:15px;font-weight:900;color:var(--deep)}
+.step h3{font-size:21px;font-weight:900;margin:8px 0 6px}
+.step p{font-size:16px;color:#3A404B}
+
+/* 얻는 것 */
+.gain{background:#fff}
+.who{display:grid;grid-template-columns:160px 1fr;gap:28px;background:var(--sand);padding:28px 36px;margin-top:14px}
+.who:first-of-type{margin-top:44px}
+.who h3{font-size:30px;font-weight:900}
+.who h3.o{color:var(--deep)}
+.who ul{list-style:none;display:grid;gap:10px}
+.who li{display:grid;grid-template-columns:150px 1fr;gap:16px;font-size:18px}
+.who li strong{color:var(--deep);font-weight:900}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--ink);color:#fff;padding:20px 36px;margin-top:14px;font-weight:700;font-size:19px}
+.flow .a{color:var(--orange);font-weight:900}
+
+/* 기능 */
+.feat .cols{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;margin-top:44px}
+.feat h3{font-size:22px;font-weight:900;padding-bottom:12px;border-bottom:3px solid var(--ink);margin-bottom:6px}
+.feat h3 span{color:var(--deep)}
+.feat ul{list-style:none;columns:1}
+.feat .store ul{columns:2;column-gap:32px}
+.feat li{padding:11px 0;border-bottom:1px solid var(--line);font-size:17px;break-inside:avoid}
+
+/* 만화 */
+.comic{background:var(--sand)}
+.comic .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.comic img{border:2px solid var(--ink)}
+
+/* 시범 운영 */
+.pilot table{width:100%;border-collapse:collapse;margin-top:40px;font-size:18px}
+.pilot th,.pilot td{text-align:left;padding:20px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.pilot th{width:200px;font-weight:900}
+
+/* 문의 */
+.contact{background:var(--ink);color:#F4F2EC}
+.contact h2{color:#fff}
+.contact .lead{color:#C9CDD4}
+.contact .info{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;background:#2A303B}
+.contact .info div{background:var(--ink);padding:24px 0 24px 0}
+.contact .info p.k{font-size:14px;color:#9AA1AD;font-weight:700}
+.contact .info p.v{font-size:21px;font-weight:900;margin-top:4px}
+.contact .info a.v{color:var(--orange)}
+footer{background:#0E1116;color:#7D8492;font-size:13px;padding:28px 0 100px}
+footer p+p{margin-top:4px}
+
+/* 휴대폰 하단 전화 버튼 */
+.mcall{display:none}
+
+@media (max-width:860px){
+  header nav{display:none}
+  .hero{padding-top:44px}
+  .hero .wrap,.what .grid,.comic .grid,.feat .cols{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .hero .sub{font-size:17px}
+  .hero .pic{padding:16px}
+  .hero-bottom{height:44px}
+  section{padding:64px 0}
+  h2{font-size:28px}
+  .lead{font-size:17px}
+  .what .dark{padding:30px}
+  .what .dark p.big{font-size:32px}
+  .steps{grid-template-columns:1fr}
+  .who{grid-template-columns:1fr;gap:12px;padding:24px}
+  .who h3{font-size:24px}
+  .who li{grid-template-columns:1fr;gap:0;font-size:16px}
+  .flow{padding:18px 24px;font-size:16px}
+  .feat .store ul{columns:1}
+  .pilot th{width:110px}
+  .pilot table{font-size:16px}
+  .contact .info{grid-template-columns:1fr}
+  .call{display:none}
+  .mcall{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--orange);color:var(--ink);text-align:center;font-weight:900;font-size:18px;padding:16px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">BRAND<span class="p">P</span><span class="l">LUS</span><small>브랜드노트 앱</small></a>
+    <nav>
+      <a href="#what">포장박스 QR쿠폰</a>
+      <a href="#gain">얻는 것</a>
+      <a href="#feat">22가지 기능</a>
+      <a href="#pilot">시범 운영</a>
+    </nav>
+    <a class="call" href="tel:01051753816">전화 문의</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="label">브랜드노트 앱 고객 관리</p>
+      <h1>배달로 만난 고객까지,<br>브랜드가 관리하고<br><em>매출을 올립니다.</em></h1>
+      <p class="sub"><b>포장박스 QR쿠폰</b>으로 고객을 모으고,<br><span class="o"><b>브랜드노트 앱</b></span>으로 관리해 다시 찾아오게 합니다.</p>
+      <div class="btns">
+        <a class="btn main" href="https://note.brandplus.co.kr/bagpd.html">체험해 보기</a>
+        <a class="btn line" href="tel:01051753816">전화 문의 010-5175-3816</a>
+      </div>
+    </div>
+    <div class="pic"><img src="img/box.jpg" alt="흰색 치킨 박스 윗면에 붙인 포장박스 QR쿠폰" width="1024" height="687"></div>
+  </div>
+  <div class="hero-bottom"></div>
+</div>
+
+<section class="what" id="what">
+  <div class="wrap">
+    <p class="kicker">포장박스 QR쿠폰이란</p>
+    <h2>포장 박스에 QR쿠폰을 붙여,<br>배달 고객을 <em>포장 고객과 고객 명단</em>으로 바꿉니다.</h2>
+    <div class="grid">
+      <div class="dark">
+        <p class="big">박스 1장에 <span>고객 3명.</span></p>
+        <p class="s">함께 먹은 <b>가족과 친구</b>도 각자 번호로 참여합니다.</p>
+      </div>
+      <img src="img/hands.jpg" alt="세 사람이 각자 휴대폰으로 박스 위 쿠폰 QR을 찍는 모습" width="1024" height="765" loading="lazy">
+    </div>
+    <div class="chips">
+      <p>앱 설치 <span>없음</span></p>
+      <p>꽝 없는 <span>100% 당첨</span></p>
+      <p>쿠폰 1장으로 <span>서로 다른 번호 3번</span> 도전</p>
+    </div>
+  </div>
+</section>
+
+<section class="process" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">진행 방식</p>
+    <h2>이렇게 진행됩니다.</h2>
+    <div class="steps">
+      <div class="step"><p class="n">01</p><h3>배달 주문 접수</h3><p>평소처럼 배달 주문을 받습니다.</p></div>
+      <div class="step"><p class="n">02</p><h3>박스에 QR쿠폰 부착</h3><p>출력한 쿠폰을 포장 박스에 붙입니다.</p></div>
+      <div class="step"><p class="n">03</p><h3>고객이 QR을 찍고 이벤트 참여</h3><p>앱 설치 없이 카메라로 찍습니다. 가족 · 친구도 참여합니다(최대 3명).</p></div>
+      <div class="step"><p class="n">04</p><h3>번호 남기고 경품 쿠폰 받기</h3><p>꽝 없는 경품이 휴대폰에 저장됩니다.</p></div>
+      <div class="step"><p class="n">05</p><h3>포장 방문, 점주가 사용 처리</h3><p>쿠폰 번호로 바로 확인합니다.</p></div>
+      <div class="step"><p class="n">06</p><h3>본사 성과 확인</h3><p>가맹점 참여도와 SV · 팀별 실행 결과를 점검합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gain" id="gain">
+  <div class="wrap">
+    <p class="kicker">얻는 것</p>
+    <h2>포장 매출만이 아닙니다. <em>함께 얻습니다.</em></h2>
+    <div class="who">
+      <h3>고객</h3>
+      <ul>
+        <li><strong>할인 · 경품권</strong><span>배달 한 번에 할인 쿠폰과 경품권을 받습니다.</span></li>
+        <li><strong>가족도 함께</strong><span>함께 먹은 가족 · 친구도 각자 경품을 받습니다.</span></li>
+        <li><strong>혜택 소식</strong><span>신메뉴, 행사, 쿠폰 기한을 먼저 안내받습니다.</span></li>
+      </ul>
+    </div>
+    <div class="who">
+      <h3>가맹점</h3>
+      <ul>
+        <li><strong>포장 매출</strong><span>경품 쿠폰을 들고 매장으로 오는 포장 고객이 생깁니다.</span></li>
+        <li><strong>고객 명단</strong><span>광고 수신에 동의한 고객 연락처가 매장에 쌓입니다.</span></li>
+        <li><strong>재주문</strong><span>수일 후 혜택 문자로 포장 · 배달 모두 다시 주문하게 합니다.</span></li>
+        <li><strong>매장 행사</strong><span>각 매장이 행사명, 행사품, 기간을 직접 정해 효율을 높입니다.</span></li>
+      </ul>
+    </div>
+    <div class="who">
+      <h3 class="o">본사</h3>
+      <ul>
+        <li><strong>신메뉴 홍보</strong><span>고객이 보는 화면에 본사 신메뉴 광고가 나갑니다.</span></li>
+        <li><strong>창업 문의</strong><span>쿠폰 화면마다 창업 안내가 노출됩니다.</span></li>
+        <li><strong>본사 관리</strong><span>팀 · SV · 매장별로 누가 실제로 실행했는지 숫자로 봅니다.</span></li>
+        <li><strong>참여율</strong><span>가맹점 참여율 상승 및 매장 운영 의욕 상승</span></li>
+      </ul>
+    </div>
+    <div class="flow">
+      <span>혜택을 받은 고객</span><span class="a">→</span><span>브랜드에 호감</span><span class="a">→</span><span>다시 주문</span><span class="a">→</span><span class="a">가맹점 매출 · 본사 성장</span>
+    </div>
+  </div>
+</section>
+
+<section class="feat" id="feat">
+  <div class="wrap">
+    <p class="kicker">브랜드노트 앱</p>
+    <h2>브랜드노트 앱 <em>22가지 기능</em></h2>
+    <div class="cols">
+      <div>
+        <h3>본사 <span>8</span></h3>
+        <ul>
+          <li>본사 공지</li><li>특수일 알림</li><li>QCS 점검</li><li>개별공지</li>
+          <li>휴무 승인</li><li>본사 건의 답변</li><li>SV 수익 비교</li><li>창업영업</li>
+        </ul>
+      </div>
+      <div class="store">
+        <h3>가맹점 <span>14</span></h3>
+        <ul>
+          <li>고객 이벤트</li><li>우리동네 홍보</li><li>고객 적립</li><li>근로계약서</li>
+          <li>직원 서류함 (보건증 · 자격증)</li><li>QR 출퇴근</li><li>국가지원 안내</li>
+          <li>급여정산 세무사 전달</li><li>주휴수당 · 최저임금 알림</li><li>근무일정</li>
+          <li>인수인계</li><li>수익계산</li><li>발주 전 날씨 · 특수일 알림</li><li>본사 건의</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="comic">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">김SV와 박사장</p>
+      <h2>가맹점 현장 이야기를<br>만화로 전합니다.</h2>
+      <p class="lead">1화 · 비 오는 날<br>토요일 비를 생각하지 못한 발주, 저녁 8시에 재료가 떨어졌습니다.</p>
+    </div>
+    <img src="img/comic1.jpg" alt="김SV와 박사장 1화 비 오는 날 6컷 만화" width="1080" height="1350" loading="lazy">
+  </div>
+</section>
+
+<section class="pilot" id="pilot">
+  <div class="wrap">
+    <p class="kicker">시범 운영 제안</p>
+    <h2>시범 운영으로 <em>먼저 확인합니다.</em></h2>
+    <table>
+      <tr><th>대상 매장</th><td>본사와 협의해 정한 시범 매장</td></tr>
+      <tr><th>기간</th><td>파일럿 1~2개월 테스트</td></tr>
+      <tr><th>측정할 숫자</th><td>쿠폰 출력 수 · 고객 참여 수 · 쿠폰 회수율 · 광고 동의 고객 수 · 본사 광고 시청 수 · 창업 문의 접속 수</td></tr>
+      <tr><th>매장 준비</th><td>쿠폰 출력 · 경품 설정 · 본사 광고 영상 등록</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker" style="color:var(--orange)">도입 문의</p>
+    <h2>브랜드노트 앱 도입을 문의해 주세요.</h2>
+    <p class="lead">프랜차이즈 본사 17년(CJ · 굽네치킨 · bhc) 경험으로 만든 운영 앱입니다.</p>
+    <div class="info">
+      <div><p class="k">담당</p><p class="v">브랜드플러스 대표 김기영</p></div>
+      <div><p class="k">전화</p><a class="v" href="tel:01051753816"><p class="v">010-5175-3816</p></a></div>
+      <div><p class="k">이메일</p><a href="mailto:kimnbasm5@naver.com"><p class="v">kimnbasm5@naver.com</p></a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>브랜드플러스 · 대표자 신혜리 · 사업자등록번호 762-05-04017</p>
+    <p>© 브랜드플러스. 브랜드노트 앱</p>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:01051753816">전화 문의 010-5175-3816</a>
+
+</body>
+</html>
